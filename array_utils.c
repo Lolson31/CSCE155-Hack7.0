@@ -40,7 +40,7 @@ int contains (const int *arr, int size, int x)
 
 int containsWithin (const int *arr, int size, int x, int i, int j)
 {
-  for (i, i < j, i++)
+  for (i; i < j; i++)
   {
     if (arr[i] == x)
     {
