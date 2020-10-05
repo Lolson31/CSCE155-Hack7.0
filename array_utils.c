@@ -64,12 +64,14 @@ int main(int argc, char const *argv[])
   int myArray2[10] = {10,9,8,7,6,5,4,3,2,1};
 
 //Test contains
+  printf("Testing contains Function: \n");
   testFunc (contains(myArray1, 5, 2));
   testFunc (contains(myArray1, 5, 0));
   testFunc (contains(myArray2, 10, 5));
   testFunc (contains(myArray2, 10, 11));
 
 //Test containsWithin
+  printf ("Testing containsWithin Function: \n");
   testFunc (containsWithin(myArray1, 5, 3, 0, 5));
   testFunc (containsWithin(myArray1, 5, 2, 1, 3));
   testFunc (containsWithin(myArray1, 5, 5, 1, 3));
