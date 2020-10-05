@@ -2,7 +2,8 @@
  * Author: Luke Olson
  * Date:   10/05/2020
  *
- * This program will
+ * This program will provide a range of utlities for checking and editing arrayUtils
+ *
  */
 
  #include <stdlib.h>
@@ -10,7 +11,7 @@
  #include <math.h>
  #include "arrayUtils.h"
 
-int testFunc (int func)
+void testFunc (int func)
 {
   if (func == 0)
   {
@@ -63,8 +64,6 @@ int main(int argc, char const *argv[])
   int myArray1[5] = {5,4,3,2,1};
 
 //test contains function
-  int contains(myArray1, 5, 2);
 
-  int
   return 0;
 }
