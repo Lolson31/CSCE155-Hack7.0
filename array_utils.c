@@ -51,7 +51,6 @@ int containsWithin (const int *arr, int size, int x, int i, int j)
   {
     return(1);
   }
-  }
 }
 /**
 int * paddedCopy (const int *arr, int oldSize, int newSize)
