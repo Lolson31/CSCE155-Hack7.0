@@ -14,3 +14,5 @@ int * paddedCopy (const int *arr, int oldSize, int newSize); //Creates a copy of
 void  reverse (int *arr, int size); //Reverses array order
 
 int * reverseCopy (const int *arr, int size); //Makes copy of array with elements in reverse order
+
+int testFunc (int func);  //Tests if a function returns 1 (true) or 0 (false)
