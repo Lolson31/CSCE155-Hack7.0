@@ -32,7 +32,7 @@ int contains (const int *arr, int size, int x)
       return (0);
     }
   }
-  if (arr[4] != x)
+  if (arr[size] != x)
   {
     return(1);
   }
@@ -40,14 +40,14 @@ int contains (const int *arr, int size, int x)
 
 int containsWithin (const int *arr, int size, int x, int i, int j)
 {
-  for (int z = i, z < j, z++)
+  for (i, i < j, i++)
   {
     if (arr[i] == x)
     {
       return (0);
     }
   }
-  if (arr[4] != x)
+  if (arr[size] != x)
   {
     return(1);
   }
@@ -62,10 +62,11 @@ int * paddedCopy (const int *arr, int oldSize, int newSize)
 int main(int argc, char const *argv[])
 {
   int myArray1[5] = {5,4,3,2,1};
+  int myArray2[10] = {10,9,8,7,6,5,4,3,2,1};
 
   testFunc (contains(myArray1, 5, 2));
   testFunc (contains(myArray1, 5, 0));
-  testFunc (contains(myArray1, 5, 5));
+  testFunc (contains(myArray2, 10, 5));
 //test contains function
 
   return 0;
