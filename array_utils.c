@@ -9,7 +9,7 @@
  #include <stdlib.h>
  #include <stdio.h>
  #include <math.h>
- #include "arrayUtils.h"
+ #include "array_utils.h"
 
 void testFunc (int func)
 {
