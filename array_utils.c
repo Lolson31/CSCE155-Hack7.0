@@ -72,10 +72,10 @@ int main(int argc, char const *argv[])
 
 //Test containsWithin
   printf ("Testing containsWithin Function: \n");
-  testFunc (containsWithin(myArray1, 5, 3, 0, 5));  //true
-  testFunc (containsWithin(myArray1, 5, 2, 1, 3));  //
-  testFunc (containsWithin(myArray1, 5, 5, 1, 3));  //
-  testFunc (containsWithin(myArray1, 5, 1, 3, 5));  //
+  testFunc (containsWithin(myArray1, 5, 3, 0, 4));  //true
+  testFunc (containsWithin(myArray1, 5, 2, 1, 3));  //true
+  testFunc (containsWithin(myArray1, 5, 5, 1, 3));  //false
+  testFunc (containsWithin(myArray1, 5, 5, 3, 4));  //false
 
   return 0;
 }
