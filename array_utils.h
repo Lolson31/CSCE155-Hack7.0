@@ -17,4 +17,4 @@ int * reverseCopy (const int *arr, int size); //Makes copy of array with element
 
 void testCheckFunc (int func);  //Tests if a function that checks an array returns 1 (true) or 0 (false)
 
-void testPaddedCopy (int func); //Returns the result of a function that edits an array
+void testPaddedCopy (int func, int newArraySize); //Returns the result of a function that edits an array
