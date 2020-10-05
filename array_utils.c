@@ -23,7 +23,7 @@ void testCheckFunc (int func)
   }
 }
 
-void testPaddedCopy(int func, int newArraySize)
+void testPaddedCopy(int *func, int newArraySize)
 {
   printf("New array: [");
   for (int i = 0; i < newArraySize; i++)
