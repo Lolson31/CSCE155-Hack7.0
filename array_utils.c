@@ -69,7 +69,7 @@ int * paddedCopy (const int *arr, int oldSize, int newSize)
 
   for (int i = 0; i < newSize; i++)
   {
-    if (arr[i] <= arr[oldSize - 1])
+    if (i <= oldSize - 1)
     {
       newArray[i] = arr[i];
     }
@@ -103,7 +103,7 @@ int main(int argc, char const *argv[])
 //Test paddedCopy
   printf("Testing paddedCopy Function: \n");
   testPaddedCopy (paddedCopy(myArray1, 5, 10), 10); //[5,4,3,2,1,0,0,0,0,0]
-  testPaddedCopy (paddedCopy(myArray1, 5, 3), 3); //[5,4,3]
+  testPaddedCopy (paddedCopy(myArray1, 5, 3), 3);   //[5,4,3]
 
   return 0;
 }
