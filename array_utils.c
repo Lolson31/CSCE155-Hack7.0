@@ -40,14 +40,14 @@ int contains (const int *arr, int size, int x)
 
 int containsWithin (const int *arr, int size, int x, int i, int j)
 {
-  for (i; i < j; i++)
+  for (i; i <= j; i++)
   {
     if (arr[i] == x)
     {
       return (1);
     }
   }
-  if (arr[j - 1] != x)
+  if (arr[j] != x)
   {
     return(0);
   }
@@ -65,17 +65,17 @@ int main(int argc, char const *argv[])
 
 //Test contains
   printf("Testing contains Function: \n");
-  testFunc (contains(myArray1, 5, 2));
-  testFunc (contains(myArray1, 5, 0));
-  testFunc (contains(myArray2, 10, 5));
-  testFunc (contains(myArray2, 10, 11));
+  testFunc (contains(myArray1, 5, 2));    //true
+  testFunc (contains(myArray1, 5, 0));    //false
+  testFunc (contains(myArray2, 10, 5));   //true
+  testFunc (contains(myArray2, 10, 11));  //false
 
 //Test containsWithin
   printf ("Testing containsWithin Function: \n");
-  testFunc (containsWithin(myArray1, 5, 3, 0, 5));
-  testFunc (containsWithin(myArray1, 5, 2, 1, 3));
-  testFunc (containsWithin(myArray1, 5, 5, 1, 3));
-  testFunc (containsWithin(myArray1, 5, 1, 3, 5));
+  testFunc (containsWithin(myArray1, 5, 3, 0, 5));  //true
+  testFunc (containsWithin(myArray1, 5, 2, 1, 3));  //
+  testFunc (containsWithin(myArray1, 5, 5, 1, 3));  //
+  testFunc (containsWithin(myArray1, 5, 1, 3, 5));  //
 
   return 0;
 }
