@@ -47,7 +47,7 @@ int containsWithin (const int *arr, int size, int x, int i, int j)
       return (1);
     }
   }
-  if (arr[size - 1] != x)
+  if (arr[j - 1] != x)
   {
     return(0);
   }
