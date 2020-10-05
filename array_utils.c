@@ -29,12 +29,12 @@ int contains (const int *arr, int size, int x)
   {
     if (arr[i] == x)
     {
-      return (0);
+      return (1);
     }
   }
-  if (arr[size] != x)
+  if (arr[size - 1] != x)
   {
-    return(1);
+    return(0);
   }
 }
 
@@ -44,12 +44,12 @@ int containsWithin (const int *arr, int size, int x, int i, int j)
   {
     if (arr[i] == x)
     {
-      return (0);
+      return (1);
     }
   }
-  if (arr[size] != x)
+  if (arr[size - 1] != x)
   {
-    return(1);
+    return(0);
   }
 }
 /**
