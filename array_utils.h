@@ -15,4 +15,6 @@ void  reverse (int *arr, int size); //Reverses array order
 
 int * reverseCopy (const int *arr, int size); //Makes copy of array with elements in reverse order
 
-void testFunc (int func);  //Tests if a function returns 1 (true) or 0 (false)
+void testCheckFunc (int func);  //Tests if a function that checks an array returns 1 (true) or 0 (false)
+
+void testPaddedCopy (int func); //Returns the result of a function that edits an array

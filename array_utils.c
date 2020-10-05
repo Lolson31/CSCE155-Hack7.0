@@ -11,7 +11,7 @@
  #include <math.h>
  #include "array_utils.h"
 
-void testFunc (int func)
+void testCheckFunc (int func)
 {
   if (func == 0)
   {
@@ -21,6 +21,16 @@ void testFunc (int func)
   {
     printf ("Returned 1 (true)\n");
   }
+}
+
+void testPaddedCopy(int func, int newArraySize)
+{
+  printf("New array: [");
+  for (int i = 0; i < newArraySize; i++)
+  {
+    printf ("%d ", func[i]);
+  }
+  printf("]\n");
 }
 
 int contains (const int *arr, int size, int x)
@@ -52,12 +62,25 @@ int containsWithin (const int *arr, int size, int x, int i, int j)
     return(0);
   }
 }
-/**
+
 int * paddedCopy (const int *arr, int oldSize, int newSize)
 {
+  int newArray[newSize];
 
+  for (int i = 0; i < newSize; i++)
+  {
+    if (arr[i] <= arr[oldSize - 1])
+    {
+      newArray[i] = arr[i];
+    }
+    else
+    {
+      newArray[i] = 0;
+    }
+  }
+  return (newArray);
 }
-*/
+
 int main(int argc, char const *argv[])
 {
   int myArray1[5] = {5,4,3,2,1};
@@ -76,6 +99,11 @@ int main(int argc, char const *argv[])
   testFunc (containsWithin(myArray1, 5, 2, 1, 3));  //true
   testFunc (containsWithin(myArray1, 5, 5, 1, 3));  //false
   testFunc (containsWithin(myArray1, 5, 5, 3, 4));  //false
+
+//Test paddedCopy
+  printf("Testing paddedCopy Function: \n");
+  testPaddedCopy (paddedCopy(myArray1, 5, 10), 10); //[5,4,3,2,1,0,0,0,0,0]
+  testPaddedCopy (paddedCopy(myArray1, 5, 3), 3); //[5,4,3]
 
   return 0;
 }
