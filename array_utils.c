@@ -88,17 +88,17 @@ int main(int argc, char const *argv[])
 
 //Test contains
   printf("Testing contains Function: \n");
-  testFunc (contains(myArray1, 5, 2));    //true
-  testFunc (contains(myArray1, 5, 0));    //false
-  testFunc (contains(myArray2, 10, 5));   //true
-  testFunc (contains(myArray2, 10, 11));  //false
+  testCheckFunc (contains(myArray1, 5, 2));    //true
+  testCheckFunc (contains(myArray1, 5, 0));    //false
+  testCheckFunc (contains(myArray2, 10, 5));   //true
+  testCheckFunc (contains(myArray2, 10, 11));  //false
 
 //Test containsWithin
   printf ("Testing containsWithin Function: \n");
-  testFunc (containsWithin(myArray1, 5, 3, 0, 4));  //true
-  testFunc (containsWithin(myArray1, 5, 2, 1, 3));  //true
-  testFunc (containsWithin(myArray1, 5, 5, 1, 3));  //false
-  testFunc (containsWithin(myArray1, 5, 5, 3, 4));  //false
+  testCheckFunc (containsWithin(myArray1, 5, 3, 0, 4));  //true
+  testCheckFunc (containsWithin(myArray1, 5, 2, 1, 3));  //true
+  testCheckFunc (containsWithin(myArray1, 5, 5, 1, 3));  //false
+  testCheckFunc (containsWithin(myArray1, 5, 5, 3, 4));  //false
 
 //Test paddedCopy
   printf("Testing paddedCopy Function: \n");
