@@ -19,7 +19,7 @@ void testFunc (int func)
   }
   else
   {
-    printf ("Returned 1 (true)")
+    printf ("Returned 1 (true)");
   }
 }
 
