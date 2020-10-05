@@ -53,16 +53,19 @@ int containsWithin (const int *arr, int size, int x, int i, int j)
   }
   }
 }
-
+/**
 int * paddedCopy (const int *arr, int oldSize, int newSize)
 {
 
 }
-
+*/
 int main(int argc, char const *argv[])
 {
   int myArray1[5] = {5,4,3,2,1};
 
+  testFunc (contains(myArray1, 5, 2));
+  testFunc (contains(myArray1, 5, 0));
+  testFunc (contains(myArray1, 5, 5));
 //test contains function
 
   return 0;
