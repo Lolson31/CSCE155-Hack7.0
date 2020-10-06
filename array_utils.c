@@ -35,6 +35,15 @@ void testEditFunc(int *func, int newArraySize)
 
 int contains (const int *arr, int size, int x)
 {
+  if (arr == NULL)
+  {
+    return(0);
+  }
+  if (size < 0)
+  {
+    return (0);
+  }
+
   for (int i = 0; i < size; i++)
   {
     if (arr[i] == x)
@@ -50,6 +59,19 @@ int contains (const int *arr, int size, int x)
 
 int containsWithin (const int *arr, int size, int x, int i, int j)
 {
+  if (arr == NULL)
+  {
+    return(0);
+  }
+  if (size < 0)
+  {
+    return (0);
+  }
+  if (i < 0 || j < 0)
+  {
+    return(0);
+  }
+
   for (i; i <= j; i++)
   {
     if (arr[i] == x)
@@ -65,6 +87,15 @@ int containsWithin (const int *arr, int size, int x, int i, int j)
 
 int * paddedCopy (const int *arr, int oldSize, int newSize)
 {
+  if (arr == NULL)
+  {
+    return(0);
+  }
+  if (oldSize < 0 || newSize < 0)
+  {
+    return (0);
+  }
+
   int *newArray = (int*) malloc(newSize * sizeof(int));
 
   for (int i = 0; i < newSize; i++)
@@ -95,6 +126,20 @@ void reverse (int *arr, int size)
 
   int * reverseCopy (const int *arr, int size)
   {
+    if (arr == NULL)
+    {
+      return(0);
+    }
+    if (size < 0)
+    {
+      return (0);
+    }
+
+    if (arr == NULL)
+    {
+      return(0);
+    }
+
     int *newArray = (int*) malloc(size * sizeof(int));
 
     for (int i = 0; i < size; i++)
@@ -103,7 +148,7 @@ void reverse (int *arr, int size)
     }
     return(newArray);
   }
-
+/**
 int main(int argc, char const *argv[])
 {
   int myArray1[5] = {5,4,3,2,1};
@@ -146,10 +191,11 @@ int main(int argc, char const *argv[])
   printf("]\n");
 
 //test reverseCopy
-  printf("Testing reverseCopy: \n")
+  printf("Testing reverseCopy: \n");
   testEditFunc (reverseCopy(myArray1, 5), 5);
   testEditFunc (reverseCopy(myArray2, 10), 10);
 
   return 0;
 }
+*/
 //hii
