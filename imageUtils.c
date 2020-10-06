@@ -61,6 +61,10 @@ void saveImage(const char *fileName, Pixel **image, int height, int width) {
 
 Pixel ** copyImage(Pixel **image, int height, int width)
 {
+  if(image == NULL || height < 0 || width < 0)
+  {
+    return(0);
+  }
   Pixel **imageCopy = (Pixel **) malloc(height * sizeof(Pixel *));
   for (int i = 0; i < height; i++)
   {
@@ -79,7 +83,6 @@ Pixel ** copyImage(Pixel **image, int height, int width)
 
 void flipHorizontal(Pixel **image, int height, int width)
 {
-  int temp;
   for (int i = 0; i < height; i++)
   {
     for (int j = 0; j < (width / 2); j++)
@@ -94,6 +97,7 @@ void flipHorizontal(Pixel **image, int height, int width)
 
 void flipVertical(Pixel **image, int height, int width)
 {
+
   for (int i = 0; i < (height / 2); i++)
   {
     for (int j = 0; j < width; j++)
@@ -105,9 +109,17 @@ void flipVertical(Pixel **image, int height, int width)
   }
   return;
 }
-/**
+
 Pixel ** rotateClockwise(Pixel **image, int height, int width)
 {
-  //TODO: implement
+  if(image == NULL || height < 0 || width < 0)
+  {
+    return(0);
+  }
+  Pixel **rotatCW = (Pixel **) malloc(height * sizeof(Pixel *));
+  for (int i = 0; i < height; i++)
+  {
+    rotatCW[i] = (Pixel *) malloc(width * sizeof(Pixel));
+  }
+  
 }
-*/
