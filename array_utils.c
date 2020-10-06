@@ -81,7 +81,7 @@ int * paddedCopy (const int *arr, int oldSize, int newSize)
   return (newArray);
 }
 
-int reverse (int *arr, int size)
+int * reverse (int *arr, int size)
 {
   int temp;
   int *newArray = (int*) malloc(size * sizeof(int));
