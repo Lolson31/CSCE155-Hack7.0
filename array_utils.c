@@ -81,7 +81,7 @@ int * paddedCopy (const int *arr, int oldSize, int newSize)
   return (newArray);
 }
 
-int reverse (int *arr, int size)
+void reverse (int *arr, int size)
 {
   int temp;
 
@@ -125,4 +125,4 @@ int main(int argc, char const *argv[])
 
   return 0;
 }
-//hi
+//hii
