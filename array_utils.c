@@ -93,7 +93,7 @@ void reverse (int *arr, int size)
   }
 }
 
-  int * reverseCopy (const int *arr, int size);
+  int * reverseCopy (const int *arr, int size)
   {
     int *newArray = (int*) malloc(size * sizeof(int));
 
