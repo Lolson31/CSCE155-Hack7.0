@@ -79,27 +79,33 @@ Pixel ** copyImage(Pixel **image, int height, int width)
 
 void flipHorizontal(Pixel **image, int height, int width)
 {
-  Pixel **imageCopy = (Pixel **) malloc(height * sizeof(Pixel *));
+  int temp;
   for (int i = 0; i < height; i++)
   {
-    imageCopy[i] = (Pixel *) malloc(width * sizeof(Pixel));
+    for (int j = 0; j < (width / 2); j++)
+    {
+      Pixel tempVal = image[i][j];
+      image[i][j] = image[i][width - j -1];
+      image[i][width - j - 1] = tempVal;
+    }
   }
-  for (int i = 0; i < height; i++)
+  return;
+}
+
+void flipVertical(Pixel **image, int height, int width)
+{
+  for (int i = 0; i < (height / 2); i++)
   {
     for (int j = 0; j < width; j++)
     {
-      imageCopy[i][j] = imageCopy[i - height][j - width];
+      Pixel tempVal = image[i][j];
+      image[i][j] = image[height - 1 - i][j];
+      image[height - 1 - i][j] = tempVal;
     }
   }
   return;
 }
 /**
-void flipVertical(Pixel **image, int height, int width)
-{
-  //TODO: implement
-  return;
-}
-
 Pixel ** rotateClockwise(Pixel **image, int height, int width)
 {
   //TODO: implement
