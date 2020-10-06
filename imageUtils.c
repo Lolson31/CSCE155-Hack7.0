@@ -59,20 +59,30 @@ void saveImage(const char *fileName, Pixel **image, int height, int width) {
   return;
 }
 
-Pixel ** copyImage(Pixel **image, int height, int width) {
-  //TODO: implement
+Pixel ** copyImage(Pixel **image, int height, int width)
+{
+  Pixel **imageCopy = (int **) malloc(height * sizeof(int *));
+  for (int i = 0; i < width; i++)
+  {
+    imageCopy[i] = (int *) malloc(width * sizeof(int));
+  }
+
+  return(imageCopy);
 }
 
-void flipHorizontal(Pixel **image, int height, int width) {
+void flipHorizontal(Pixel **image, int height, int width)
+{
   //TODO: implement
   return;
 }
 
-void flipVertical(Pixel **image, int height, int width) {
+void flipVertical(Pixel **image, int height, int width)
+{
   //TODO: implement
   return;
 }
 
-Pixel ** rotateClockwise(Pixel **image, int height, int width) {
+Pixel ** rotateClockwise(Pixel **image, int height, int width)
+{
   //TODO: implement
 }
