@@ -126,6 +126,13 @@ int main(int argc, char const *argv[])
   printf("%d ", myArray1[i]);
   }
   printf("]\n");
+  reverse(myArray1, 5);
+  printf("[");
+  for (int i = 0; i < 5; i++)
+  {
+  printf("%d ", myArray1[i]);
+  }
+  printf("]\n");
 
   return 0;
 }
