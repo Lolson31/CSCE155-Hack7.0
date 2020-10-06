@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 
   Pixel **horizFlippedImage = flipHorizontal (image, h, w);
   flipHorizontal(image, h, w);
-  saveImage("horizFlip.jpg", h, w)
+  saveImage("horizFlip.jpg", h, w);
 
   return 0;
 }
