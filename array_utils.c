@@ -119,7 +119,7 @@ int main(int argc, char const *argv[])
 
 //Test reverse
   printf("Testing reverse Function: \n");
-  testEditFunc(reverse)
+  testEditFunc(reverse(myArray1, 5), 5);
 
   return 0;
 }
