@@ -17,7 +17,9 @@ int main(int argc, char **argv)
   Pixel **copiedImage = copyImage(image, h, w);
   saveImage("copy.jpg", copiedImage, h, w);
 
-  saveImage("copy.jpg", image, h, w);
+  Pixel **horizFlippedImage = flipHorizontal (image, h, w);
+  flipHorizontal(image, h, w);
+  saveImage("horizFlip.jpg", h, w)
 
   return 0;
 }

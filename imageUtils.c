@@ -76,13 +76,24 @@ Pixel ** copyImage(Pixel **image, int height, int width)
 
   return(imageCopy);
 }
-/**
+
 void flipHorizontal(Pixel **image, int height, int width)
 {
-
-  return;
+  Pixel **imageCopy = (Pixel **) malloc(height * sizeof(Pixel *));
+  for (int i = 0; i < height; i++)
+  {
+    imageCopy[i] = (Pixel *) malloc(width * sizeof(Pixel));
+  }
+  for (int i = 0; i < height; i++)
+  {
+    for (int j = 0; j < width; j++)
+    {
+      imageCopy[i][j] = imageCopy[i - height][j - width];
+    }
+  }
+  return (imageCopy);
 }
-
+/**
 void flipVertical(Pixel **image, int height, int width)
 {
   //TODO: implement
