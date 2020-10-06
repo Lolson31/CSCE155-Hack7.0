@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
   int h, w;
   Pixel **image = loadImage("Parrot.jpg", &h, &w);
 
-  copyImage();
+  copyImage(image, h, w);
 
   saveImage("copy.jpg", image, h, w);
 
