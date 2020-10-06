@@ -81,16 +81,14 @@ int * paddedCopy (const int *arr, int oldSize, int newSize)
   return (newArray);
 }
 
-int * reverse (int *arr, int size)
+int reverse (int *arr, int size)
 {
   int temp;
-  int *newArray = (int*) malloc(size * sizeof(int));
 
-  for (int i = 0; i < (size); i++)
+  for (int i = 0; i < (size) / 2; i++)
   {
-    newArray[i] = arr[size - 1 - i];
+    arr[i] = arr[size - 1 - i];
   }
-  return(newArray);
 }
 
 int main(int argc, char const *argv[])
@@ -119,7 +117,11 @@ int main(int argc, char const *argv[])
 
 //Test reverse
   printf("Testing reverse Function: \n");
-  testEditFunc(reverse(myArray1, 5), 5);
+  reverse(myArray1, 5);
+  for (int i = 0; i < 5; i++)
+  {
+  printf("%d", myArray1[i])
+  }
 
   return 0;
 }
