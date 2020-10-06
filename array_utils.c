@@ -86,7 +86,7 @@ int * reverse (int *arr, int size)
   int temp;
   int *newArray = (int*) malloc(size * sizeof(int));
 
-  for (int i = 0; i < (size / 2); i++)
+  for (int i = 0; i < (size); i++)
   {
     newArray[i] = arr[size - 1 - i];
   }
