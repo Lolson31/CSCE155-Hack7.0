@@ -146,7 +146,9 @@ int main(int argc, char const *argv[])
   printf("]\n");
 
 //test reverseCopy
+  printf("Testing reverseCopy: \n")
   testEditFunc (reverseCopy(myArray1, 5), 5);
+  testEditFunc (reverseCopy(myArray2, 10), 10);
 
   return 0;
 }
