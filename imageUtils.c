@@ -91,7 +91,7 @@ void flipHorizontal(Pixel **image, int height, int width)
       imageCopy[i][j] = imageCopy[i - height][j - width];
     }
   }
-  return (imageCopy);
+  return;
 }
 /**
 void flipVertical(Pixel **image, int height, int width)
