@@ -104,6 +104,7 @@ void reverse (int *arr, int size)
     return(newArray);
   }
 
+/**
 int main(int argc, char const *argv[])
 {
   int myArray1[5] = {5,4,3,2,1};
@@ -152,4 +153,4 @@ int main(int argc, char const *argv[])
 
   return 0;
 }
-//hii
+*/

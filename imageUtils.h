@@ -28,6 +28,7 @@ void saveImage(const char *filePath, Pixel **image, int height, int width);
 
 /**
  * TODO: add documentation
+ * Copies the an image given the image file, height (in pixels), and width (in piexels)
  */
 Pixel ** copyImage(Pixel **image, int height, int width);
 
