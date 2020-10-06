@@ -8,7 +8,8 @@
 
 #include "imageUtils.h"
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
 
   int h, w;
   Pixel **image = loadImage("Parrot.jpg", &h, &w);
