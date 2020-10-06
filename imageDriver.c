@@ -11,9 +11,9 @@
 int main(int argc, char **argv) {
 
   int h, w;
-  Pixel **image = loadImage("yourImage.jpeg", &h, &w);
+  Pixel **image = loadImage("Parrot.jpg", &h, &w);
 
-  //TODO: perform any function calls here
+  copyImage();
 
   saveImage("copy.jpg", image, h, w);
 
