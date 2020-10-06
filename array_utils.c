@@ -93,6 +93,17 @@ void reverse (int *arr, int size)
   }
 }
 
+  int * reverseCopy (const int *arr, int size);
+  {
+    int *newArray = (int*) malloc(size * sizeof(int));
+
+    for (int i = 0; i < size; i++)
+    {
+      newArray[i] = arr[size - i - 1];
+    }
+    return(newArray);
+  }
+
 int main(int argc, char const *argv[])
 {
   int myArray1[5] = {5,4,3,2,1};
@@ -133,6 +144,9 @@ int main(int argc, char const *argv[])
   printf("%d ", myArray1[i]);
   }
   printf("]\n");
+
+//test reverseCopy
+  testEditFunc (reverseCopy(myArray1, 5), 5);
 
   return 0;
 }
