@@ -61,10 +61,10 @@ void saveImage(const char *fileName, Pixel **image, int height, int width) {
 
 Pixel ** copyImage(Pixel **image, int height, int width)
 {
-  Pixel **imageCopy = (int **) malloc(height * sizeof(int *));
+  Pixel **imageCopy = (Pixel **) malloc(height * sizeof(Pixel *));
   for (int i = 0; i < width; i++)
   {
-    imageCopy[i] = (int *) malloc(width * sizeof(int));
+    imageCopy[i] = (Pixel *) malloc(width * sizeof(Pixel));
     
   return(imageCopy);
 }
