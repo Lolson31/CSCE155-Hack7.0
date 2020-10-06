@@ -11,6 +11,8 @@
  #include <math.h>
  #include "array_utils.h"
 
+//Test functions commented out
+/**
 void testCheckFunc (int func)
 {
   if (func == 0)
@@ -32,7 +34,9 @@ void testEditFunc(int *func, int newArraySize)
   }
   printf("]\n");
 }
+*/
 
+//required functions
 int contains (const int *arr, int size, int x)
 {
   for (int i = 0; i < size; i++)
@@ -59,7 +63,7 @@ int containsWithin (const int *arr, int size, int x, int i, int j)
   }
   if (arr[j] != x)
   {
-    return(0);
+    return(1);
   }
 }
 
@@ -104,6 +108,7 @@ void reverse (int *arr, int size)
     return(newArray);
   }
 
+//Tests commented out
 /**
 int main(int argc, char const *argv[])
 {
