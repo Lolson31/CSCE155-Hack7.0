@@ -117,23 +117,17 @@ Pixel ** rotateClockwise(Pixel **image, int height, int width)
     return(0);
   }
 
-  Pixel **rotatCW = (Pixel **) malloc(height * sizeof(Pixel *));
-  for (int i = 0; i < height; i++)
+  Pixel **rotatCW = (Pixel **) malloc(width * sizeof(Pixel *));
+  for (int i = 0; i < width; i++)
   {
-    rotatCW[i] = (Pixel *) malloc(width * sizeof(Pixel));
+    rotatCW[i] = (Pixel *) malloc(height * sizeof(Pixel));
   }
-
-  int *w = width;
-  int *h = height;
-  int temp = *w;
-  *w = *h;
-  *h = temp;
 
   for (int i = 0; i < height; i++)
   {
     for (int j = 0; j < width; j++)
     {
-      rotatCW[i][j] = rotatCW[i + 1][j + 1];
+      
     }
   }
 
